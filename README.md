@@ -1,4 +1,4 @@
-# Full-Stack Developer Portfolio - Task 1
+# Personal Portfolio Website
 
 This repository contains my personal portfolio website constructed during my Full-Stack Web Development Internship at ApexPlanet Software Pvt. Ltd.
 
