@@ -4,11 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
 
-    form.addEventListener('submit', (event) => {
-        // Prevent default form submission reload
-        event.preventDefault(); 
+    // Safety check to debug in console
+    if (!form) {
+        console.error("DEBUG ERROR: JavaScript could not find an HTML element with id='contactForm'. Check your index.php file!");
+        return;
+    }
 
-        // Clear any old error highlighting
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Stop page from refreshing
+        
         resetStyles();
 
         // 1. Validate Name
@@ -18,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // 2. Validate Email using Regex pattern
+        // 2. Validate Email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailInput.value.trim())) {
             alert("Please enter a valid email address.");
@@ -26,14 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // 3. Validate Message length (must be at least 10 characters)
+        // 3. Validate Message
         if (messageInput.value.trim().length < 10) {
             alert("Your message must be at least 10 characters long.");
             highlightError(messageInput);
             return;
         }
 
-        // If everything passes local verification
+        // 4. Send data via AJAX to PHP backend
+        console.log("Validation passed! Sending data to submit_contact.php...");
+        
         fetch('submit_contact.php', {
             method: 'POST',
             headers: {
@@ -43,21 +49,21 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(response => response.text())
         .then(data => {
-            if (data === "success") {
+            console.log("Server response raw data:", data); // Check what PHP sends back
+            if (data.trim() === "success") {
                 alert("Thank you! Your submission has been captured safely directly into the MySQL database.");
                 form.reset();
             } else {
-                alert("Backend registration anomaly reported: " + data);
+                alert("Backend message reported: " + data);
             }
         })
         .catch(error => {
-            console.error('Error handling transaction framework:', error);
+            console.error('Fetch transaction error:', error);
         });
-        form.reset(); // Clear form fields
     });
 
     function highlightError(inputElement) {
-        inputElement.style.borderColor = "#ef4444"; // Red outline border
+        inputElement.style.borderColor = "#ef4444";
         inputElement.focus();
     }
 
