@@ -34,7 +34,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // If everything passes local verification
-        alert("Success! Form validation passed locally. Ready for backend handling.");
+        fetch('submit_contact.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams(new FormData(form))
+        })
+        .then(response => response.text())
+        .then(data => {
+            if (data === "success") {
+                alert("Thank you! Your submission has been captured safely directly into the MySQL database.");
+                form.reset();
+            } else {
+                alert("Backend registration anomaly reported: " + data);
+            }
+        })
+        .catch(error => {
+            console.error('Error handling transaction framework:', error);
+        });
         form.reset(); // Clear form fields
     });
 
