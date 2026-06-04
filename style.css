@@ -231,6 +231,21 @@ section {
     transition: var(--transition-smooth);
 }
 
+#contactForm input, #contactForm textarea, #contactForm select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #334155; 
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: #0f172a; 
+    color: #ffffff; 
+}
+
+#contactForm select option {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
 #contactForm input:focus, #contactForm textarea:focus {
     outline: none;
     border-color: var(--accent);

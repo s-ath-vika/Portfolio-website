@@ -80,7 +80,7 @@ ground up, and contribute effectively to collaborative engineering projects.</p>
 
         <section id="contact">
             <h2>Get In Touch</h2>
-            <form id="contactForm" method="POST">>
+            <form id="contactForm" method="POST">
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required placeholder="Your Name">
