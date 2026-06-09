@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Professional Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
 </head>
 <body>
 
@@ -27,18 +27,38 @@
             <p>Aspiring engineering candidate focused on continuous professional development and exploring emerging technical domains.
 Aiming to leverage a strong foundational mindset to quickly adapt to organizational workflows, analyze system logic from the
 ground up, and contribute effectively to collaborative engineering projects.</p>
-            <h3>Core Technical Skills</h3>
-            <ul>
-                <li>Programming Languages: C, Java, Python</li>
-                <li>Frontend: HTML5, CSS3, JavaScript</li>
-                <li>Backend & Databases: PHP, MySQL</li>
-                <li>Version Control: Git & GitHub</li>
-                <li>Designing Software: Canva </li>
-            </ul>
+            
         </section>
 
         <hr>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+        
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <p>C, Java, Python</p>
+                </div>
 
+                <div class="skill-card">
+                    <h3>Frontend Development</h3>
+                    <p>HTML5, CSS3, JavaScript</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Backend & Databases</h3>
+                    <p>PHP, MySQL</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools & Version Control</h3>
+                    <p>Git, GitHub, Canva</p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
         <section id="projects">
             <h2>Featured Projects</h2>
             <div class="project-container">
