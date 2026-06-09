@@ -62,7 +62,7 @@ ground up, and contribute effectively to collaborative engineering projects.</p>
         <section id="projects">
             <h2>Featured Projects</h2>
             <div class="project-container">
-                
+        
                 <article class="project-card">
                     <h3>Real-Time Intelligent Phishing & Malicious URL Detector</h3>
                     <p class="tech-stack"><strong>Tech Stack:</strong> Python, Scikit-learn, Random Forest, Streamlit</p>
@@ -70,6 +70,7 @@ ground up, and contribute effectively to collaborative engineering projects.</p>
                         <li>Engineered an end-to-end Random Forest pipeline achieving 96% accuracy across 650K+ URL samples.</li>
                         <li>Implemented a custom feature extraction script isolating 7 distinct lexical and network protocol indicators.</li>
                         <li>Developed a responsive Streamlit web app with a localized model inference engine for live threat scoring.</li>
+                        <li class="project-link-item"><strong>Source Code:</strong> <a href="https://github.com/s-ath-vika/phishing-detector.git" target="_blank" class="project-git-link">github.com/s-ath-vika/phishing-detector</a></li>
                     </ul>
                 </article>
 
@@ -80,6 +81,7 @@ ground up, and contribute effectively to collaborative engineering projects.</p>
                         <li>Engineered a desktop app to fetch and parse real-time global weather data via RESTful APIs.</li>
                         <li>Implemented robust error-handling to manage invalid queries, network timeouts, and rate limits.</li>
                         <li>Processed raw JSON data feeds to extract key metrics like temperature, humidity, and wind speed.</li>
+                        <li class="project-link-item"><strong>Source Code:</strong> <a href="https://github.com/s-ath-vika/WeatherApp.git" target="_blank" class="project-git-link">github.com/s-ath-vika/WeatherApp</a></li>
                     </ul>
                 </article>
 
@@ -88,8 +90,9 @@ ground up, and contribute effectively to collaborative engineering projects.</p>
                     <p class="tech-stack"><strong>Tech Stack:</strong> Python, Qrcode Library</p>
                     <ul>
                         <li>Utilized Python and the qrcode library to generate QR codes from user input.</li>
-                        <li> Developed a Python application that converts text, URLs, or data into scannable QR code images.</li>
+                        <li>Developed a Python application that converts text, URLs, or data into scannable QR code images.</li>
                         <li>Enabled users to easily create, save, and share QR codes in a simple and efficient format.</li>
+                        <li class="project-link-item"><strong>Source Code:</strong> <a href="https://github.com/s-ath-vika/Generate-QR-code.git" target="_blank" class="project-git-link">github.com/s-ath-vika/Generate-QR-code</a></li>
                     </ul>
                 </article>
 
